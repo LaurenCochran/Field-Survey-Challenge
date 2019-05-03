@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		DDB810FA227B41A000621DFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB810F9227B41A000621DFD /* AppDelegate.swift */; };
-		DDB810FC227B41A000621DFD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB810FB227B41A000621DFD /* ViewController.swift */; };
 		DDB810FF227B41A000621DFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB810FD227B41A000621DFD /* Main.storyboard */; };
 		DDB81101227B41A800621DFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDB81100227B41A800621DFD /* Assets.xcassets */; };
 		DDB81104227B41A800621DFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB81102227B41A800621DFD /* LaunchScreen.storyboard */; };
 		DDB8110F227B41A900621DFD /* Field_SurveyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB8110E227B41A900621DFD /* Field_SurveyTests.swift */; };
 		DDB8111A227B41A900621DFD /* Field_SurveyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB81119227B41A900621DFD /* Field_SurveyUITests.swift */; };
+		DDB81128227B4A5100621DFD /* FieldSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB81127227B4A5100621DFD /* FieldSurveyViewController.swift */; };
+		DDB8112A227B4AE100621DFD /* FieldSurveyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB81129227B4AE100621DFD /* FieldSurveyDetailViewController.swift */; };
+		DDB8112D227CEC4500621DFD /* FieldSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB8112C227CEC4500621DFD /* FieldSurvey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,6 @@
 /* Begin PBXFileReference section */
 		DDB810F6227B41A000621DFD /* Field Survey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Field Survey.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB810F9227B41A000621DFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DDB810FB227B41A000621DFD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DDB810FE227B41A000621DFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DDB81100227B41A800621DFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDB81103227B41A800621DFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,9 @@
 		DDB81115227B41A900621DFD /* Field SurveyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Field SurveyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB81119227B41A900621DFD /* Field_SurveyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Field_SurveyUITests.swift; sourceTree = "<group>"; };
 		DDB8111B227B41A900621DFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDB81127227B4A5100621DFD /* FieldSurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldSurveyViewController.swift; sourceTree = "<group>"; };
+		DDB81129227B4AE100621DFD /* FieldSurveyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldSurveyDetailViewController.swift; sourceTree = "<group>"; };
+		DDB8112C227CEC4500621DFD /* FieldSurvey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldSurvey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +101,14 @@
 		DDB810F8227B41A000621DFD /* Field Survey */ = {
 			isa = PBXGroup;
 			children = (
+				DDB8112B227CEC2800621DFD /* Model */,
 				DDB810F9227B41A000621DFD /* AppDelegate.swift */,
-				DDB810FB227B41A000621DFD /* ViewController.swift */,
 				DDB810FD227B41A000621DFD /* Main.storyboard */,
 				DDB81100227B41A800621DFD /* Assets.xcassets */,
 				DDB81102227B41A800621DFD /* LaunchScreen.storyboard */,
 				DDB81105227B41A800621DFD /* Info.plist */,
+				DDB81127227B4A5100621DFD /* FieldSurveyViewController.swift */,
+				DDB81129227B4AE100621DFD /* FieldSurveyDetailViewController.swift */,
 			);
 			path = "Field Survey";
 			sourceTree = "<group>";
@@ -123,6 +129,14 @@
 				DDB8111B227B41A900621DFD /* Info.plist */,
 			);
 			path = "Field SurveyUITests";
+			sourceTree = "<group>";
+		};
+		DDB8112B227CEC2800621DFD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DDB8112C227CEC4500621DFD /* FieldSurvey.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +270,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDB810FC227B41A000621DFD /* ViewController.swift in Sources */,
 				DDB810FA227B41A000621DFD /* AppDelegate.swift in Sources */,
+				DDB81128227B4A5100621DFD /* FieldSurveyViewController.swift in Sources */,
+				DDB8112D227CEC4500621DFD /* FieldSurvey.swift in Sources */,
+				DDB8112A227B4AE100621DFD /* FieldSurveyDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
