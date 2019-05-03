@@ -9,26 +9,31 @@
 import UIKit
 
 class FieldSurveyDetailViewController: UIViewController {
-    var fieldSurvey: FieldSurvey?
-    @IBOutlet weak var fieldSurveyImageView: UIImageView!
     
+    var fieldSurvey: FieldSurvey?
+    
+    let dateFormatter = DateFormatter()
+    
+    @IBOutlet weak var fieldSurveyImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var matchupLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .medium
+        
+        if let fieldSurvey = fieldSurvey{
+            titleLabel.text = fieldSurvey.title
+            dateLabel.text = dateFormatter.string(from: fieldSurvey.date)
+            fieldSurveyImageView.image = UIImage(named: fieldSurvey.classification.rawValue)
 
-        // Do any additional setup after loading the view.
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+
     }
-    */
-
 }
