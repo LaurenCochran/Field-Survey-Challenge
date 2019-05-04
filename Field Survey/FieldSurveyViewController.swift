@@ -34,14 +34,14 @@ class FieldSurveyViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return fieldSurveys?.survey.count ?? 0
+        return fieldSurveys?.observations.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = fieldSurveyTableView.dequeueReusableCell(withIdentifier: "fieldSurveyCell", for: indexPath)
         
         if let cell = cell as? FieldSurveyTableViewCell,
-            let fieldSurvey = fieldSurveys?.survey[indexPath.row] {
+            let fieldSurvey = fieldSurveys?.observations[indexPath.row] {
             cell.titleLabel.text = fieldSurvey.title
             cell.dateLabel.text = dateFormatter.string(from: fieldSurvey.date)
             cell.classificationIconImageView.image = UIImage(named: fieldSurvey.classification.rawValue)
@@ -53,7 +53,7 @@ class FieldSurveyViewController: UIViewController, UITableViewDelegate, UITableV
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? FieldSurveyDetailViewController,
             let selectedIndexPath = fieldSurveyTableView.indexPathForSelectedRow {
-            destination.fieldSurvey = fieldSurveys?.survey[selectedIndexPath.row]
+            destination.fieldSurvey = fieldSurveys?.observations[selectedIndexPath.row]
         }
     }
     

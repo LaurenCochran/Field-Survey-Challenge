@@ -15,8 +15,9 @@ class FieldSurveyDetailViewController: UIViewController {
     let dateFormatter = DateFormatter()
     
     @IBOutlet weak var fieldSurveyImageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
+ 
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
     override func viewDidLoad() {
@@ -25,8 +26,11 @@ class FieldSurveyDetailViewController: UIViewController {
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .medium
         
+        self.title = "Observation"
+        
         if let fieldSurvey = fieldSurvey{
             titleLabel.text = fieldSurvey.title
+            descriptionLabel.text = fieldSurvey.description
             dateLabel.text = dateFormatter.string(from: fieldSurvey.date)
             fieldSurveyImageView.image = UIImage(named: fieldSurvey.classification.rawValue)
 

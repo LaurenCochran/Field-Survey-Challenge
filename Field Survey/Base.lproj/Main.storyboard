@@ -26,7 +26,7 @@
             </objects>
             <point key="canvasLocation" x="-1100" y="135"/>
         </scene>
-        <!--Field Survey View Controller-->
+        <!--Field Survey-->
         <scene sceneID="V1U-ur-Gws">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="JKw-36-XI3" customClass="FieldSurveyViewController" customModule="Field_Survey" customModuleProvider="target" sceneMemberID="viewController">
@@ -101,7 +101,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2A3-J0-Zrb"/>
                     </view>
-                    <navigationItem key="navigationItem" id="hGT-m8-ci6"/>
+                    <navigationItem key="navigationItem" title="Field Survey" id="hGT-m8-ci6"/>
                     <connections>
                         <outlet property="fieldSurveyTableView" destination="HVd-1R-hcr" id="9Dj-Hr-DkO"/>
                     </connections>
@@ -126,20 +126,23 @@
                                     <constraint firstAttribute="height" constant="50" id="alx-II-sae"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="titleLabel" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="If2-Ef-arc">
-                                <rect key="frame" x="20" y="139" width="42" height="19.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="titleLabel" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="If2-Ef-arc">
+                                <rect key="frame" x="78" y="74" width="281" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="37B-s6-fOI">
-                                <rect key="frame" x="20" y="173.5" width="42" height="21"/>
+                                <rect key="frame" x="78" y="104" width="281" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="CVD-dP-eYg"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czr-0a-hGb">
-                                <rect key="frame" x="20" y="210" width="42" height="21"/>
+                                <rect key="frame" x="20" y="132" width="339" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -147,26 +150,28 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="If2-Ef-arc" firstAttribute="top" secondItem="OEk-Et-CQZ" secondAttribute="bottom" constant="15" id="3Io-bl-2EY"/>
-                            <constraint firstItem="37B-s6-fOI" firstAttribute="leading" secondItem="r4b-e0-q18" secondAttribute="leading" constant="20" id="3yG-Ej-gRg"/>
-                            <constraint firstItem="r4b-e0-q18" firstAttribute="trailing" secondItem="37B-s6-fOI" secondAttribute="trailing" constant="313" id="CuU-tq-zsc"/>
-                            <constraint firstItem="If2-Ef-arc" firstAttribute="leading" secondItem="r4b-e0-q18" secondAttribute="leading" constant="20" id="N59-c8-mGv"/>
-                            <constraint firstItem="czr-0a-hGb" firstAttribute="leading" secondItem="r4b-e0-q18" secondAttribute="leading" constant="20" id="Z6e-1a-3Io"/>
-                            <constraint firstItem="czr-0a-hGb" firstAttribute="top" secondItem="37B-s6-fOI" secondAttribute="bottom" constant="15.5" id="bu2-Fb-rzl"/>
-                            <constraint firstItem="r4b-e0-q18" firstAttribute="bottom" secondItem="czr-0a-hGb" secondAttribute="bottom" constant="436" id="ddb-fU-S2H"/>
-                            <constraint firstItem="r4b-e0-q18" firstAttribute="trailing" secondItem="If2-Ef-arc" secondAttribute="trailing" constant="313" id="fVc-XZ-RW8"/>
+                            <constraint firstItem="37B-s6-fOI" firstAttribute="leading" secondItem="OEk-Et-CQZ" secondAttribute="trailing" constant="8" id="1mO-Vf-tMz"/>
+                            <constraint firstItem="If2-Ef-arc" firstAttribute="top" secondItem="r4b-e0-q18" secondAttribute="top" constant="10" id="8dv-ka-F9c"/>
+                            <constraint firstItem="If2-Ef-arc" firstAttribute="leading" secondItem="OEk-Et-CQZ" secondAttribute="trailing" constant="8" id="9hr-Sh-XHD"/>
+                            <constraint firstItem="r4b-e0-q18" firstAttribute="trailing" secondItem="37B-s6-fOI" secondAttribute="trailing" constant="16" id="PBq-VW-Qk9"/>
+                            <constraint firstItem="czr-0a-hGb" firstAttribute="top" secondItem="OEk-Et-CQZ" secondAttribute="bottom" constant="8" id="PVz-B6-Hqh"/>
+                            <constraint firstItem="r4b-e0-q18" firstAttribute="trailing" secondItem="If2-Ef-arc" secondAttribute="trailing" constant="16" id="TcP-Vm-fL5"/>
+                            <constraint firstItem="r4b-e0-q18" firstAttribute="trailing" secondItem="czr-0a-hGb" secondAttribute="trailing" constant="16" id="WCx-EJ-Fac"/>
                             <constraint firstItem="OEk-Et-CQZ" firstAttribute="top" secondItem="r4b-e0-q18" secondAttribute="top" constant="10" id="hOi-0s-sXV"/>
-                            <constraint firstItem="37B-s6-fOI" firstAttribute="top" secondItem="If2-Ef-arc" secondAttribute="bottom" constant="15" id="j5P-3K-HYl"/>
+                            <constraint firstItem="37B-s6-fOI" firstAttribute="top" secondItem="If2-Ef-arc" secondAttribute="bottom" constant="10" id="mg4-Fk-T54"/>
+                            <constraint firstItem="37B-s6-fOI" firstAttribute="top" secondItem="If2-Ef-arc" secondAttribute="bottom" constant="10" id="mhY-9Q-OqJ"/>
+                            <constraint firstItem="czr-0a-hGb" firstAttribute="leading" secondItem="r4b-e0-q18" secondAttribute="leading" constant="20" id="mzv-dt-GT1"/>
+                            <constraint firstItem="r4b-e0-q18" firstAttribute="bottom" secondItem="czr-0a-hGb" secondAttribute="bottom" constant="515" id="qyq-IL-Opx"/>
                             <constraint firstItem="OEk-Et-CQZ" firstAttribute="leading" secondItem="r4b-e0-q18" secondAttribute="leading" constant="20" id="vMP-UU-az7"/>
-                            <constraint firstItem="r4b-e0-q18" firstAttribute="trailing" secondItem="czr-0a-hGb" secondAttribute="trailing" constant="313" id="y6T-h6-ZZC"/>
+                            <constraint firstItem="r4b-e0-q18" firstAttribute="bottom" secondItem="37B-s6-fOI" secondAttribute="bottom" constant="543" id="wjQ-ET-JeS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="r4b-e0-q18"/>
                     </view>
                     <connections>
+                        <outlet property="dateLabel" destination="37B-s6-fOI" id="Jj6-yQ-djm"/>
                         <outlet property="descriptionLabel" destination="czr-0a-hGb" id="mrc-EM-xfb"/>
                         <outlet property="fieldSurveyImageView" destination="OEk-Et-CQZ" id="6rv-4a-KX1"/>
-                        <outlet property="gateLabel" destination="37B-s6-fOI" id="Ash-bg-IR1"/>
-                        <outlet property="matchupLabel" destination="If2-Ef-arc" id="KDr-nv-Gqp"/>
+                        <outlet property="titleLabel" destination="If2-Ef-arc" id="Mts-3C-Lpn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IIf-Ch-bIX" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -27,5 +27,5 @@ struct FieldSurvey: Codable {
 
 struct FieldSurveys: Codable {
     var status: String
-    var survey: [FieldSurvey]
+    var observations: [FieldSurvey]
 }
